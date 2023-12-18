@@ -1,0 +1,21 @@
+@import '@styles/base';
+
+.scrollableModal {
+  overflow-y: scroll;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .date {
+    display: flex;
+    flex-direction: column;
+  }
+  button {
+    background-color: rgb(7, 7, 66);
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+  }
+}

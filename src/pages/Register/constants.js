@@ -1,0 +1,3 @@
+export const REGISTER_USER = 'Register/REGISTER_USER';
+export const SUCCESS_REGISTER_USER = 'Register/SUCCESS_REGISTER_USER';
+export const FAILURE_REGISTER_USER = 'Register/FAILURE_REGISTER_USER';

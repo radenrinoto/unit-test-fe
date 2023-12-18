@@ -1,0 +1,31 @@
+@import '@styles/base';
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  .label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .contentInput {
+    background-color: rgb(201, 201, 247);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    .icon {
+      font-size: 18px;
+      cursor: pointer;
+    }
+    input {
+      width: 100%;
+      border: none;
+      background-color: transparent;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

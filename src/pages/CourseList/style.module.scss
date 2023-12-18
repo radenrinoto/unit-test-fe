@@ -1,0 +1,35 @@
+@import '@styles/base';
+
+.myCourse {
+  margin: 50px 20px;
+  @include apply-at-md-size {
+    @media (min-width: $screen-md-limit) {
+      flex-direction: row;
+      margin: 50px;
+    }
+  }
+  @include apply-at-lg-size {
+    @media (min-width: $screen-lg-limit) {
+      margin: 50px 100px;
+    }
+  }
+  .coursesList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include apply-at-md-size {
+      @media (min-width: $screen-md-limit) {
+        flex-direction: row;
+      }
+    }
+
+    .courseZero {
+      width: 100%;
+      text-align: center;
+    }
+    .buyNow {
+      color: blue;
+      cursor: pointer;
+    }
+  }
+}

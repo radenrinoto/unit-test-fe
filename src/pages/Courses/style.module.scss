@@ -1,0 +1,53 @@
+@import '@styles/base';
+
+.courses {
+  margin: 50px 20px;
+  @include apply-at-md-size {
+    @media (min-width: $screen-md-limit) {
+      margin: 50px;
+    }
+  }
+  @include apply-at-lg-size {
+    @media (min-width: $screen-lg-limit) {
+      margin: 50px 100px;
+    }
+  }
+  .cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px 0px;
+  }
+  input {
+    background-color: white;
+    padding: 10px 15px;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    &:focus {
+      outline: 1px solid blue;
+    }
+  }
+  .listCategory {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    overflow-x: scroll;
+  }
+  .category {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+      transition: 0.2s;
+      background-color: rgb(14, 14, 66);
+      color: white;
+    }
+    &.active {
+      transition: 0.5s;
+      background-color: rgb(14, 14, 66);
+      color: white;
+    }
+  }
+}

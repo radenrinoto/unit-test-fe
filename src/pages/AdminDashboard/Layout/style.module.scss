@@ -1,0 +1,12 @@
+@import '@styles/base';
+
+.layoutAdmin {
+  display: flex;
+  gap: 20px;
+  padding: 20px 20px 0px 0px;
+  @include apply-at-md-size {
+    @media (min-width: $screen-md-limit) {
+      gap: 30px;
+    }
+  }
+}

@@ -1,0 +1,127 @@
+@import '@styles/base';
+
+.headerWrapper {
+  background-color: var(--color-bg) !important;
+  box-shadow: 0 0.25rem 0.75rem rgba(25, 49, 83, 0.2) !important;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  .contentWrapper {
+    @include directionX;
+
+    color: var(--color-text);
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+
+    .logoImage {
+      @include directionX;
+      cursor: pointer;
+      align-items: center;
+      display: none;
+      @include apply-at-lg-size {
+        @media (min-width: $screen-lg-limit) {
+          display: flex;
+        }
+      }
+
+      .logo {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0.5rem;
+      }
+      .title {
+        font-weight: 700;
+      }
+    }
+
+    .contentMiddle {
+      display: flex;
+      gap: 10px;
+      @include apply-at-md-size {
+        @media (min-width: $screen-md-limit) {
+          gap: 30px;
+        }
+      }
+      .middleLink {
+        font-size: 16px;
+        cursor: pointer;
+        &:hover {
+          color: blue;
+        }
+        &.active {
+          color: blue;
+        }
+      }
+    }
+
+    .isLogin {
+      display: flex;
+      gap: 20px;
+      .login {
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+    .toolbar {
+      @include directionX;
+      .theme {
+        @include directionX;
+        align-items: center;
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+      .toggle {
+        @include directionX;
+        align-items: center;
+        cursor: pointer;
+        .fullName {
+          display: none;
+          @include apply-at-md-size {
+            @media (min-width: $screen-md-limit) {
+              display: block;
+            }
+          }
+        }
+        .avatar {
+          width: 1.2rem;
+          height: 1.2rem;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          margin-right: 0.5rem;
+        }
+
+        .lang {
+          font-family: Poppins, Arial, Helvetica, sans-serif;
+          font-weight: 700;
+          font-size: 1rem;
+          text-transform: uppercase;
+        }
+
+        .arrow {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.menuMUI {
+  margin-top: 30px;
+}
+.menu {
+  @include directionX;
+  align-items: center;
+
+  .menuAvatar {
+    width: 1rem;
+    height: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-right: 0.5rem;
+  }
+
+  .menuLang {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+  }
+}

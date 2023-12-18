@@ -1,0 +1,21 @@
+@import '@styles/base';
+
+.forgotPassword {
+  background-color: white;
+  padding: 100px 20px;
+
+  @include apply-at-lg-size {
+    @media (min-width: $screen-lg-limit) {
+      padding: 100px;
+    }
+  }
+
+  .btn {
+    background-color: rgb(7, 7, 99);
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+  }
+}
